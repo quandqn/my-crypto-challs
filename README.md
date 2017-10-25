@@ -3,4 +3,4 @@ Some of my crypto challenges
 
 GLHF!
 
-Twoot me: https://naos.crypto.church/@qd
+Toots me: https://naos.crypto.church/@qd
