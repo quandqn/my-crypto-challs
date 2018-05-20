@@ -1,0 +1,93 @@
+$ python rev.py 
+[8062, 7082, 12769, 7829, 7841, 11060, 9773, 6701, 9961, 6701, 11341, 6842, 11126, 6698, 10687, 7679, 6680, 7043, 8453, 6701, 9961, 6671, 10834, 8239, 11063]
+[-126, -121, -87, -169, -153, 149, -82, -123, -123, -123, -89, 65, -68, -127, -46, -104, -151, -173, -148, -123, -123, -163, 150, 110, -152]
+$ python -m dis rev.py 
+  1           0 LOAD_CONST               0 ('Find me!')
+              3 STORE_NAME               0 (flag)
+
+  3           6 BUILD_LIST               0
+              9 STORE_NAME               1 (arr)
+
+  4          12 BUILD_LIST               0
+             15 STORE_NAME               2 (v1)
+
+  5          18 BUILD_LIST               0
+             21 STORE_NAME               3 (v2)
+
+  7          24 SETUP_LOOP              33 (to 60)
+             27 LOAD_NAME                0 (flag)
+             30 GET_ITER            
+        >>   31 FOR_ITER                25 (to 59)
+             34 STORE_NAME               4 (char)
+
+  8          37 LOAD_NAME                1 (arr)
+             40 LOAD_ATTR                5 (append)
+             43 LOAD_NAME                6 (ord)
+             46 LOAD_NAME                4 (char)
+             49 CALL_FUNCTION            1
+             52 CALL_FUNCTION            1
+             55 POP_TOP             
+             56 JUMP_ABSOLUTE           31
+        >>   59 POP_BLOCK           
+
+ 10     >>   60 SETUP_LOOP             110 (to 173)
+             63 LOAD_NAME                7 (range)
+             66 LOAD_CONST               1 (0)
+             69 LOAD_NAME                8 (len)
+             72 LOAD_NAME                1 (arr)
+             75 CALL_FUNCTION            1
+             78 LOAD_CONST               2 (2)
+             81 CALL_FUNCTION            3
+             84 GET_ITER            
+        >>   85 FOR_ITER                84 (to 172)
+             88 STORE_NAME               9 (i)
+
+ 11          91 LOAD_NAME                2 (v1)
+             94 LOAD_ATTR                5 (append)
+             97 LOAD_NAME                1 (arr)
+            100 LOAD_NAME                9 (i)
+            103 BINARY_SUBSCR       
+            104 LOAD_CONST               2 (2)
+            107 BINARY_POWER        
+            108 LOAD_CONST               3 (3)
+            111 LOAD_NAME                1 (arr)
+            114 LOAD_NAME                9 (i)
+            117 LOAD_CONST               4 (1)
+            120 BINARY_ADD          
+            121 BINARY_SUBSCR       
+            122 BINARY_MULTIPLY     
+            123 BINARY_SUBTRACT     
+            124 LOAD_CONST               5 (2018)
+            127 BINARY_SUBTRACT     
+            128 CALL_FUNCTION            1
+            131 POP_TOP             
+
+ 12         132 LOAD_NAME                3 (v2)
+            135 LOAD_ATTR                5 (append)
+            138 LOAD_CONST               3 (3)
+            141 LOAD_NAME                1 (arr)
+            144 LOAD_NAME                9 (i)
+            147 BINARY_SUBSCR       
+            148 BINARY_MULTIPLY     
+            149 LOAD_CONST               6 (4)
+            152 LOAD_NAME                1 (arr)
+            155 LOAD_NAME                9 (i)
+            158 LOAD_CONST               4 (1)
+            161 BINARY_ADD          
+            162 BINARY_SUBSCR       
+            163 BINARY_MULTIPLY     
+            164 BINARY_SUBTRACT     
+            165 CALL_FUNCTION            1
+            168 POP_TOP             
+            169 JUMP_ABSOLUTE           85
+        >>  172 POP_BLOCK           
+
+ 14     >>  173 LOAD_NAME                2 (v1)
+            176 PRINT_ITEM          
+            177 PRINT_NEWLINE       
+
+ 15         178 LOAD_NAME                3 (v2)
+            181 PRINT_ITEM          
+            182 PRINT_NEWLINE       
+            183 LOAD_CONST               7 (None)
+            186 RETURN_VALUE        
