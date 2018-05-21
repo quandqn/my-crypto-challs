@@ -99,7 +99,7 @@ def login():
 						except:
 							print 'Invalid username/key length!'
 				elif _choice == '2':
-					print 'https://gist.github.com/quandqn/d69a57dbef1ea61e2599609c10e19bd5'
+					print 'https://gist.github.com/quandqn/d637ecbae4abf3f675c2767445fd7da6'
 				else:
 					print 'Bye!'
 					break
