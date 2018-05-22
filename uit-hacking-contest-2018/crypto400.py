@@ -37,7 +37,7 @@ def _superencrypt(k, kk, kkk):
 
 def generate_creds(uname, passwd):
 	ROLE = '0'
-	s = "uname={}&passwd={}&ROLE={}".format(uname, md5(passwd).hexdigest(), ROLE)
+	s = "uname={}&passwd={}&ROLE={}".format(uname, passwd.encode('hex'), ROLE)
 	s+= "&sign=" + sha1(SECRET + s).hexdigest()
 	return b64encode(s)
 
@@ -57,7 +57,7 @@ def parse(info):
 		if b.startswith('uname='):
 			uname = b[6:]
 		if b.startswith('passwd='):
-			passwd = b[7:]
+			passwd = b[7:].decode('hex')
 	return [uname, passwd, ROLE]
 
 def login():
