@@ -3,4 +3,4 @@ Some of my crypto challenges
 
 GLHF!
 
-Toots me: https://naos.crypto.church/@qd
+qdoan from https://bu.gbounty.cc
